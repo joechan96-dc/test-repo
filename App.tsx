@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   RefreshCw, 
   Printer, 
@@ -214,7 +213,7 @@ function App() {
     
     setAssignments(prev => ({ ...prev, [key]: newAssignments }));
     
-    const currentLocs = { ...teacherLocations[key] } || {};
+    const currentLocs = true || {};
     if (currentLocs[teacherName]) {
         delete currentLocs[teacherName];
     }
@@ -485,7 +484,7 @@ function App() {
              <div className="p-3 overflow-y-auto custom-scrollbar flex-1">
                 <div className="space-y-2">
                     {displayedTeachers.map(teacher => {
-                        const isDP = DP_TEACHERS.has(teacher);
+                        // const isDP = DP_TEACHERS.has(teacher);
                         
                         // Check if teacher is busy in the currently viewed block
                         // Only relevant in "By Block" view, or we default to false in class view (as class view shows multiple blocks)

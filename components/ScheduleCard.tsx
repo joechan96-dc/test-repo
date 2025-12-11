@@ -15,7 +15,6 @@ interface ScheduleCardProps {
 }
 
 export const ScheduleCard: React.FC<ScheduleCardProps> = ({
-  day,
   block,
   cls,
   assignedTeachers,
